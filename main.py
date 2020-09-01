@@ -42,8 +42,8 @@ class AwsModel(Resource):
 
                 question_list = self.read_excel_data('aws.xlsx')
                 response = {
-                    # 'data': question_list[int(res['page'])]
-                    'data': question_list
+                    'data': question_list[int(res['page'])]
+                    # 'data': question_list
                 }
                 return response
 
