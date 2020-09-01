@@ -23,11 +23,17 @@ class AwsModel(Resource):
 
             row_value = sheet.row_values(index)  # 获取每行的数据
             question_dict = {}
+            option_list = []
             question_dict['question'] = row_value[0]
-            question_dict['A'] = row_value[1]
-            question_dict['B'] = row_value[2]
-            question_dict['C'] = row_value[3]
-            question_dict['D'] = row_value[4]
+            option_list.append('A. ' + row_value[1])
+            option_list.append('B. ' + row_value[2])
+            option_list.append('C. ' + row_value[3])
+            option_list.append('D. ' + row_value[4])
+            # question_dict['A'] = row_value[1]
+            # question_dict['B'] = row_value[2]
+            # question_dict['C'] = row_value[3]
+            # question_dict['D'] = row_value[4]
+            question_dict['option'] = option_list
             question_dict['answer'] = row_value[5]
             question_list.append(question_dict)
 
