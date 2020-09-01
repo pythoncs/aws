@@ -1,0 +1,15 @@
+name: Build and Publish Docker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to Docker Repository
+      uses: jerray/publish-docker-action@master
+      with:
+        repository: meta-houselai/aws
+        registry: registry.cn-shenzhen.aliyuncs.com
+        username: "liuling六翎"
+        password: "helloAliyun@123369"
+        auto_tag: true
