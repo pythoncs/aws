@@ -61,10 +61,10 @@ class AwsModel(Resource):
         return question_list, total_number
 
     def read_excel_data_three(self, filepath):
-        # 读取Excel文件 sheet2
+        # 读取Excel文件 sheet3
         workbook = xlrd.open_workbook(filepath)
-        # 获取sheet2 多选题库
-        sheet = workbook.sheet_by_index(1)
+        # 获取sheet3 多选题库
+        sheet = workbook.sheet_by_index(2)
         # 创建一个问题+选项+答案的列表
         question_list = []
         # 根据文件的条数做遍历
