@@ -106,7 +106,7 @@ class AwsModel(Resource):
                 }
                 return response
             if res['TOKEN'] == 'aws-sap-cs-3':
-                question_list, total_number = self.read_excel_data_two('aws.xlsx')
+                question_list, total_number = self.read_excel_data_three('aws.xlsx')
                 response = {
                     'data': question_list[int(res['page'])],
                     'total_number': total_number
